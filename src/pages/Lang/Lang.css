@@ -35,6 +35,13 @@
   left: 20px;
 }
 
+.lang .wrapper {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 .lang .content {
   margin: 0 auto;
   margin-top: 50px;
@@ -100,7 +107,7 @@
   justify-content: center;
   font-size: 30px;
   font-weight: 500;
-  color: #dcbaff;
+  color: #fc0000;
   text-transform: uppercase;
 }
 
@@ -118,4 +125,25 @@
 
 .lang .image_block:hover .image {
   transform: scale(1.2);
+}
+
+.lang .wrapper {
+  width: 94%;
+  max-width: 1250px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.lang .wrapper .tab {
+  cursor: pointer;
+  padding: 12px 20px;
+  font-size: 18px;
+  background: #dcbaff;
+  border-radius: 300px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.lang .wrapper .tab.active {
+  background: blue;
 }
