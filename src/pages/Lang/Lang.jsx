@@ -6,6 +6,7 @@ import { data1 } from "../../data/day1";
 import { data3 } from "../../data/day3";
 import { data4 } from "../../data/day4";
 import { data5 } from "../../data/day5";
+import { data6 } from "../../data/day6";
 
 const allData = {
   day1: data1,
@@ -18,7 +19,9 @@ const allData = {
 function Lang() {
   const [value, setValue] = useState("");
   const [activeTab, setActiveTab] = useState("day2");
-  const [flipped, setFlipped] = useState(Array(allData[activeTab].length).fill(false));
+  const [flipped, setFlipped] = useState(
+    Array(allData[activeTab].length).fill(false)
+  );
 
   const handleFlip = (index) => {
     setFlipped((prevFlipped) =>
@@ -31,7 +34,7 @@ function Lang() {
     setFlipped(Array(allData[tab].length).fill(false));
   };
 
-  const data = allData[activeTab];
+  const data = data6;
 
   const filteredData = data.filter(
     (el) =>
@@ -49,23 +52,38 @@ function Lang() {
           onChange={(e) => setValue(e.target.value)}
         />
       </div>
-      <div className="wrapper">
-        <div className={`tab ${activeTab === "day1" ? "active" : ""}`} onClick={() => handleTabChange("day1")}>
+      {/* <div className="wrapper">
+        <div
+          className={`tab ${activeTab === "day1" ? "active" : ""}`}
+          onClick={() => handleTabChange("day1")}
+        >
           День 1
         </div>
-        <div className={`tab ${activeTab === "day2" ? "active" : ""}`} onClick={() => handleTabChange("day2")}>
+        <div
+          className={`tab ${activeTab === "day2" ? "active" : ""}`}
+          onClick={() => handleTabChange("day2")}
+        >
           День 2
         </div>
-        <div className={`tab ${activeTab === "day3" ? "active" : ""}`} onClick={() => handleTabChange("day3")}>
+        <div
+          className={`tab ${activeTab === "day3" ? "active" : ""}`}
+          onClick={() => handleTabChange("day3")}
+        >
           День 3
         </div>
-        <div className={`tab ${activeTab === "day4" ? "active" : ""}`} onClick={() => handleTabChange("day4")}>
+        <div
+          className={`tab ${activeTab === "day4" ? "active" : ""}`}
+          onClick={() => handleTabChange("day4")}
+        >
           День 4
         </div>
-        <div className={`tab ${activeTab === "day5" ? "active" : ""}`} onClick={() => handleTabChange("day5")}>
+        <div
+          className={`tab ${activeTab === "day5" ? "active" : ""}`}
+          onClick={() => handleTabChange("day5")}
+        >
           День 5
         </div>
-      </div>
+      </div> */}
       <div className="content">
         {filteredData.map((el, index) => (
           <div
